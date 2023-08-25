@@ -1,11 +1,15 @@
 import React from 'react';
 
-const homePage = () => {
+// material ui
+import { useTheme, Button, Typography } from '@mui/material';
+
+const HomePage = () => {
+  const theme = useTheme();
   return (
-    <div>
+    <Typography>
       homepage
-    </div>
+    </Typography>
   );
 };
 
-export default homePage;
+export default HomePage;
