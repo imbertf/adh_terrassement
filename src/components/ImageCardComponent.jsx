@@ -8,7 +8,16 @@ export default function ImgMediaCard({ image, alt, title, text, link }) {
   const theme = useTheme();
 
   return (
-    <Card sx={{ maxWidth: 350 }}>
+    <Card
+      sx={{
+        maxWidth: 350,
+        transition: "transform 0.2s",
+        "&:hover": {
+          transform: "scale(1.05)",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        },
+      }}
+    >
       <CardMedia
         component="img"
         alt={alt}

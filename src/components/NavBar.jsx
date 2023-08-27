@@ -1,5 +1,6 @@
 // react
 import * as React from "react";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 // material ui
 import AppBar from "@mui/material/AppBar";
@@ -9,7 +10,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 
 // material icon
@@ -17,8 +18,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 // images
 import Logo from "../medias/logo/logo.webp";
-
-const pages = ["Services", "A propos", "Devis"];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -29,6 +28,13 @@ const NavBar = () => {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const scrollToWithOffset = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (
@@ -64,13 +70,51 @@ const NavBar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" color={"primary"}>
-                    {page}
-                  </Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center" color={"red"}>
+                  <ScrollLink
+                    to="services"
+                    onClick={() => {
+                      scrollToWithOffset("services");
+                      handleCloseNavMenu();
+                    }}
+                    smooth={true}
+                    duration={500}
+                  >
+                    Services
+                  </ScrollLink>
+                </Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center" color={"red"}>
+                  <ScrollLink
+                    to="realisations"
+                    onClick={() => {
+                      scrollToWithOffset("realisations");
+                      handleCloseNavMenu();
+                    }}
+                    smooth={true}
+                    duration={500}
+                  >
+                    Réalisations
+                  </ScrollLink>
+                </Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center" color={"red"}>
+                  <ScrollLink
+                    to="contact"
+                    onClick={() => {
+                      scrollToWithOffset("contact");
+                      handleCloseNavMenu();
+                    }}
+                    smooth={true}
+                    duration={500}
+                  >
+                    Contact
+                  </ScrollLink>
+                </Typography>
+              </MenuItem>
             </Menu>
           </Box>
           <Box>
@@ -83,19 +127,54 @@ const NavBar = () => {
               justifyContent: "flex-end",
             }}
           >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Typography textAlign="center" color={"primary"}>
+                <ScrollLink to="services" smooth={true} duration={500}>
+                  Services
+                </ScrollLink>
+              </Typography>
+            </MenuItem>
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Typography textAlign="center" color={"primary"}>
+                <ScrollLink to="realisations" smooth={true} duration={500}>
+                  Réalisations
+                </ScrollLink>
+              </Typography>
+            </MenuItem>
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Typography textAlign="center" color={"primary"}>
+                <ScrollLink to="contact" smooth={true} duration={500}>
+                  Contact
+                </ScrollLink>
+              </Typography>
+            </MenuItem>
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
   );
 };
+
+// const pages = ["Services", "A propos", "Devis"];
+
+// burger
+// {/* {pages.map((page) => (
+//   <MenuItem key={page} onClick={handleCloseNavMenu}>
+//     <Typography textAlign="center" color={"red"}>
+//       {page}
+//     </Typography>
+//   </MenuItem>
+// ))} */}
+
+// {
+// /* {pages.map((page) => (
+//             <Button
+//               key={page}
+//               onClick={handleCloseNavMenu}
+//               sx={{ my: 2, color: "white", display: "block" }}
+//             >
+//               {page}
+//             </Button>
+//           ))} */
+// }
 export default NavBar;

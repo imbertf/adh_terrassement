@@ -27,6 +27,12 @@ export default function CardComponent({ title, text, icon }) {
       border={`1px solid ${theme.palette.primary.medium}`}
       width={"275px"}
       m={{ xs: "10px" }}
+      sx={{
+        transition: "transform 0.2s",
+        "&:hover": {
+          background: "#2b1f18ff",
+        },
+      }}
     >
       <Card
         variant="outlined"

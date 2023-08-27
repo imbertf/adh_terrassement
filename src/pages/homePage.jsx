@@ -19,12 +19,14 @@ import Enrochement3 from "../medias/images/enrochement_3.jpg";
 // components
 import CardComponent from "../components/CardComponent";
 import ImageCardComponent from "../components/ImageCardComponent";
+import ContactForm from "../components/ContactForm";
 
 // material icons
 import HandshakeOutlinedIcon from "@mui/icons-material/HandshakeOutlined";
 import PoolOutlinedIcon from "@mui/icons-material/PoolOutlined";
 import InsertLinkOutlinedIcon from "@mui/icons-material/InsertLinkOutlined";
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   const theme = useTheme();
@@ -137,6 +139,7 @@ const HomePage = () => {
         </Box>
         <Box
           component={"section"}
+          id="services"
           sx={{ borderBottom: `2px solid ${theme.palette.primary.medium}` }}
           my={{ xs: 5, sm: 10 }}
           pb={5}
@@ -236,7 +239,12 @@ const HomePage = () => {
             </Box>
           </Stack>
         </Box>
-        <Box component={"section"} my={1}>
+        <Box
+          component={"section"}
+          id="realisations"
+          my={{ xs: 5, sm: 10 }}
+          sx={{ borderBottom: `2px solid ${theme.palette.primary.medium}` }}
+        >
           <Stack
             direction={{ sm: "row" }}
             display={"flex"}
@@ -332,6 +340,28 @@ const HomePage = () => {
             </Box>
           </Box>
         </Box>
+        <Box
+          component={"section"}
+          id="contact"
+          my={{ xs: 5, sm: 10 }}
+          sx={{ borderBottom: `2px solid ${theme.palette.primary.medium}` }}
+          display={"flex"}
+          flexDirection={{ xs: "column", sm: "row" }}
+        >
+          <Stack textAlign={{ xs: "center", sm: "start" }} pr={{ sm: "20px" }}>
+            <Typography component="h2" variant="h4" mb={3}>
+              CONTACT
+            </Typography>
+            <Typography color={theme.palette.primary.light} mb={3}>
+              Pour établir un devis, remplissez le formulaire de contact. Si
+              vous le souhaitez, n'hésitez pas à nous appeler directement ou par
+              mail. Expliquer votre projet en quelques lignes afin de pouvoir au
+              mieux préparer votre accompagnement
+            </Typography>
+          </Stack>
+          <ContactForm />
+        </Box>
+        <Footer />
       </Container>
     </>
   );
