@@ -1,5 +1,6 @@
 // react
 import * as React from "react";
+import { Link } from "react-router-dom";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 // material ui
@@ -15,6 +16,7 @@ import MenuItem from "@mui/material/MenuItem";
 
 // material icon
 import MenuIcon from "@mui/icons-material/Menu";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 // images
 import Logo from "../medias/logo/logo.webp";
@@ -41,7 +43,12 @@ const NavBar = () => {
     <AppBar position="static">
       <Container maxWidth="xl" sx={{ py: "10px" }}>
         <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -70,8 +77,11 @@ const NavBar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center" color={"red"}>
+              <MenuItem
+                onClick={handleCloseNavMenu}
+                sx={{ background: "black" }}
+              >
+                <Typography textAlign="center">
                   <ScrollLink
                     to="services"
                     onClick={() => {
@@ -85,8 +95,11 @@ const NavBar = () => {
                   </ScrollLink>
                 </Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center" color={"red"}>
+              <MenuItem
+                onClick={handleCloseNavMenu}
+                sx={{ background: "black" }}
+              >
+                <Typography textAlign="center">
                   <ScrollLink
                     to="realisations"
                     onClick={() => {
@@ -100,8 +113,11 @@ const NavBar = () => {
                   </ScrollLink>
                 </Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center" color={"red"}>
+              <MenuItem
+                onClick={handleCloseNavMenu}
+                sx={{ background: "black" }}
+              >
+                <Typography textAlign="center">
                   <ScrollLink
                     to="contact"
                     onClick={() => {
@@ -118,7 +134,7 @@ const NavBar = () => {
             </Menu>
           </Box>
           <Box>
-            <img src={Logo} alt="logo" />
+            <img src={Logo} alt="logo de ADH Terrassement" />
           </Box>
           <Box
             sx={{
@@ -148,6 +164,22 @@ const NavBar = () => {
                 </ScrollLink>
               </Typography>
             </MenuItem>
+            <MenuItem onClick={handleCloseNavMenu} sx={{ px: "0" }}>
+              <Link
+                to={"https://www.facebook.com/adhterrassement"}
+                target="_blank"
+                rel="noopener"
+              >
+                <FacebookIcon
+                  sx={{
+                    fontSize: "30px",
+                    path: {
+                      color: "#4267B2",
+                    },
+                  }}
+                />
+              </Link>
+            </MenuItem>
           </Box>
         </Toolbar>
       </Container>
@@ -155,26 +187,4 @@ const NavBar = () => {
   );
 };
 
-// const pages = ["Services", "A propos", "Devis"];
-
-// burger
-// {/* {pages.map((page) => (
-//   <MenuItem key={page} onClick={handleCloseNavMenu}>
-//     <Typography textAlign="center" color={"red"}>
-//       {page}
-//     </Typography>
-//   </MenuItem>
-// ))} */}
-
-// {
-// /* {pages.map((page) => (
-//             <Button
-//               key={page}
-//               onClick={handleCloseNavMenu}
-//               sx={{ my: 2, color: "white", display: "block" }}
-//             >
-//               {page}
-//             </Button>
-//           ))} */
-// }
 export default NavBar;

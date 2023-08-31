@@ -14,6 +14,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 // theme porvider
 import Theme from "./theme/Theme";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,6 +22,7 @@ root.render(
     <ThemeProvider theme={Theme}>
       <CssBaseline />
       <App />
+      <ScrollToTopButton />
     </ThemeProvider>
   </React.StrictMode>
 );

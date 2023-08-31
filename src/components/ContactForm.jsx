@@ -39,7 +39,7 @@ const Contact = () => {
   return (
     <Box
       component="form"
-      action="https://public.herotofu.com/v1/38f15300-f813-11ed-9eca-1f15a141e038"
+      action="https://public.herotofu.com/v1/5e1326d0-4760-11ee-ac97-dda96a2aa48a"
       method="post"
       acceptCharset="UTF-8"
       onSubmit={handleSubmit}

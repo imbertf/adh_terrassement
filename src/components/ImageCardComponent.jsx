@@ -10,7 +10,7 @@ export default function ImgMediaCard({ image, alt, title, text, link }) {
   return (
     <Card
       sx={{
-        maxWidth: 350,
+        maxWidth: { xs: "250px", lg: "350px" },
         transition: "transform 0.2s",
         "&:hover": {
           transform: "scale(1.05)",

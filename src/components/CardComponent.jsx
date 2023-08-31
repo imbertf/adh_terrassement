@@ -28,9 +28,12 @@ export default function CardComponent({ title, text, icon }) {
       width={"275px"}
       m={{ xs: "10px" }}
       sx={{
-        transition: "transform 0.2s",
+        transition: "all 0.2s ease",
         "&:hover": {
           background: "#2b1f18ff",
+          svg: {
+            color: `${theme.palette.text.primary}`,
+          },
         },
       }}
     >
@@ -38,7 +41,7 @@ export default function CardComponent({ title, text, icon }) {
         variant="outlined"
         sx={{
           background: "transparent",
-          minHeight: "230px",
+          minHeight: "300px",
           display: "flex",
           flexDirection: "column",
           p: "10px 5px",

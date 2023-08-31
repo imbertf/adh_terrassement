@@ -26,6 +26,14 @@ const theme = createTheme({
   },
 
   components: {
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          fontFamily: `system-ui, sans-serif`,
+        },
+      },
+    },
+
     MuiAppBar: {
       styleOverrides: {
         root: {

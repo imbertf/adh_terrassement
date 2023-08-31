@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 // material ui
 import NavBar from "../components/NavBar";
@@ -12,28 +14,35 @@ import Olivier1 from "../medias/images/olivier_1.jpg";
 import Piscine2 from "../medias/images/piscine_2.jpg";
 import Materiel1 from "../medias/images/materiel_1.jpg";
 import Terrassement2 from "../medias/images/terrassement_2.jpg";
-import Fondation1 from "../medias/images/fondation_1.jpg";
-import Fosse2 from "../medias/images/fosse_2.jpg";
+import Fondation1 from "../medias/images/fondation_2.jpg";
+import Cuve2 from "../medias/images/cuve_2.jpg";
 import Enrochement3 from "../medias/images/enrochement_3.jpg";
+import Epandage1 from "../medias/images/epandage_1.jpg";
+import Epandage2 from "../medias/images/epandage_2.jpg";
+import Epandage3 from "../medias/images/epandage_3.jpg";
+import Epandage4 from "../medias/images/epandage_4.jpg";
 
 // components
 import CardComponent from "../components/CardComponent";
 import ImageCardComponent from "../components/ImageCardComponent";
 import ContactForm from "../components/ContactForm";
+import Footer from "../components/Footer";
 
 // material icons
 import HandshakeOutlinedIcon from "@mui/icons-material/HandshakeOutlined";
 import PoolOutlinedIcon from "@mui/icons-material/PoolOutlined";
 import InsertLinkOutlinedIcon from "@mui/icons-material/InsertLinkOutlined";
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
-import Footer from "../components/Footer";
+import BusinessCenterOutlinedIcon from "@mui/icons-material/BusinessCenterOutlined";
+import FolderSpecialOutlinedIcon from "@mui/icons-material/FolderSpecialOutlined";
+import StarBorderPurple500OutlinedIcon from "@mui/icons-material/StarBorderPurple500Outlined";
 
 const HomePage = () => {
   const theme = useTheme();
   return (
     <>
       <NavBar />
-      <Container sx={{ mt: "80px" }} component={"main"}>
+      <Container sx={{ mt: "80px" }} component={"main"} maxWidth="xl">
         <Box component={"section"} my={1}>
           <Stack
             direction={{ sm: "row" }}
@@ -43,18 +52,21 @@ const HomePage = () => {
             <Typography component="h1" variant="h2" width={{ sm: "45%" }}>
               ARTISANT TERRASSIER A PERNES LES FONTAINES
             </Typography>
+
             <Stack width={{ sm: "40%" }} pt={2}>
               <Typography mb={4}>
                 Disponible pour tous vos travaux de terrassement et aménagement.
                 ADH Terrassement est la pour vous accompagner dans vos projets!
               </Typography>
-              <Button
-                color="secondary"
-                variant="contained"
-                sx={{ width: "150px", borderRadius: 0 }}
-              >
-                Devis
-              </Button>
+              <ScrollLink to="contact" smooth={true} duration={500}>
+                <Button
+                  color="secondary"
+                  variant="contained"
+                  sx={{ width: "150px", borderRadius: 0 }}
+                >
+                  Devis
+                </Button>
+              </ScrollLink>
             </Stack>
           </Stack>
         </Box>
@@ -89,9 +101,13 @@ const HomePage = () => {
               }}
             >
               <Typography color={theme.palette.primary.light}>
-                Expérience
+                L'expertise ADH Terrassement, une aventure qui dure depuis plus
+                de 7 ans.
               </Typography>
-              <Typography fontSize={20}>10 ans</Typography>
+              <Typography fontSize={20}>
+                Pour vous et à vos côtés depuis 2016 et plus d'une 50aine de
+                projets réalisés
+              </Typography>
             </Box>
             <Box
               sx={{
@@ -105,9 +121,12 @@ const HomePage = () => {
               }}
             >
               <Typography color={theme.palette.primary.light}>
-                Réalisations
+                Assurance décennale comprise
               </Typography>
-              <Typography fontSize={20}>20 projets</Typography>
+              <Typography fontSize={20}>
+                Après la réalisation des travaux, ADH Terrassement assure
+                l'intervention en cas de problème grâce à l'assurance décennale
+              </Typography>
             </Box>
             <Box
               sx={{
@@ -145,7 +164,7 @@ const HomePage = () => {
           pb={5}
         >
           <Stack
-            direction={{ md: "row" }}
+            direction={{ lg: "row" }}
             alignItems={"center"}
             justifyContent={"space-between"}
           >
@@ -163,20 +182,22 @@ const HomePage = () => {
                 d'assainissement ou viabilisation, nous pouvons intervenir sur
                 tout types de chantiers.
               </Typography>
-              <Button
-                color="secondary"
-                variant="contained"
-                size="small"
-                sx={{ width: "150px", borderRadius: 0 }}
-              >
-                Devis
-              </Button>
+              <ScrollLink to="contact" smooth={true} duration={500}>
+                <Button
+                  color="secondary"
+                  variant="contained"
+                  size="small"
+                  sx={{ width: "150px", borderRadius: 0 }}
+                >
+                  Devis
+                </Button>
+              </ScrollLink>
             </Box>
             <Box
               display={"flex"}
               flexDirection={{ xs: "column", sm: "row" }}
               flexWrap={{ sm: "wrap" }}
-              justifyContent={{ sm: "center", md: "flex-end" }}
+              justifyContent={{ sm: "center", lg: "flex-end" }}
             >
               <Box>
                 <CardComponent
@@ -236,8 +257,124 @@ const HomePage = () => {
                   }
                 />
               </Box>
+              <Box>
+                <CardComponent
+                  title={"Mise aux normes d'assainissement"}
+                  text={
+                    "En partenariat avec Soléo environnement qui, après étude de cas, définira les options de travaux à faire"
+                  }
+                  icon={
+                    <BusinessCenterOutlinedIcon
+                      sx={{
+                        color: theme.palette.primary.light,
+                        fontSize: "40px",
+                      }}
+                    />
+                  }
+                />
+              </Box>
+              <Box>
+                <CardComponent
+                  title={"Projet complet"}
+                  text={
+                    "Vous accompagner dans votre projet de A à Z. Reccueil des besoins, conseils, accompagnement et mise à disposition de l'expertise ADH Terrassement "
+                  }
+                  icon={
+                    <FolderSpecialOutlinedIcon
+                      sx={{
+                        color: theme.palette.primary.light,
+                        fontSize: "40px",
+                      }}
+                    />
+                  }
+                />
+              </Box>
             </Box>
           </Stack>
+        </Box>
+        <Box
+          component={"section"}
+          id="projet"
+          sx={{ borderBottom: `2px solid ${theme.palette.primary.medium}` }}
+          my={{ xs: 5, sm: 10 }}
+          pb={5}
+        >
+          <Stack
+            direction={{ lg: "row" }}
+            alignItems={"center"}
+            justifyContent={"space-between"}
+          >
+            <Box
+              mb={{ xs: "20px" }}
+              textAlign={{ xs: "center", sm: "inherit" }}
+              maxWidth={"500px"}
+            >
+              <Typography component="h2" variant="h4" mb={3} display={"flex"}>
+                PROJET COMPLET
+                <StarBorderPurple500OutlinedIcon
+                  sx={{ path: { color: "gold" } }}
+                />
+              </Typography>
+              <Typography color={theme.palette.primary.light} mb={3}>
+                Visite du site, reccueil des besoins, établissement du cahier
+                des charges, proposition d'un devis personnalisé et réalisation
+                de A à Z.
+              </Typography>
+              <ScrollLink to="contact" smooth={true} duration={500}>
+                <Button
+                  color="secondary"
+                  variant="contained"
+                  size="small"
+                  sx={{ width: "150px", borderRadius: 0 }}
+                  to="contact"
+                >
+                  Devis
+                </Button>
+              </ScrollLink>
+            </Box>
+            <Typography color={theme.palette.primary.light} mb={3}>
+              Pause d'un epandage après étude de mise aux normes
+              d'assainissement
+            </Typography>
+          </Stack>
+          <Box
+            display={"flex"}
+            flexWrap={"wrap"}
+            justifyContent={{ xs: "center", sm: "space-between" }}
+          >
+            <Box mx={1}>
+              <ImageCardComponent
+                title={"1"}
+                image={Epandage1}
+                alt={"fosse septique"}
+                text={""}
+              />
+            </Box>
+            <Box mx={1}>
+              <ImageCardComponent
+                title={"2"}
+                image={Epandage2}
+                alt={""}
+                text={""}
+              />
+            </Box>
+            <Box mx={1}>
+              <ImageCardComponent
+                title={"3"}
+                image={Epandage3}
+                alt={""}
+                text={""}
+              />
+            </Box>
+            <Box mx={1}>
+              <ImageCardComponent
+                title={"4"}
+                image={Epandage4}
+                alt={""}
+                text={""}
+              />
+            </Box>
+          </Box>
         </Box>
         <Box
           component={"section"}
@@ -312,19 +449,21 @@ const HomePage = () => {
             </Box>
             <Box>
               <ImageCardComponent
-                title={"Création des espaces fondations"}
+                title={"Terrassement des fondations, plateformes"}
                 image={Fondation1}
                 alt={"fondations"}
-                text={"Préparation des fondations"}
+                text={
+                  "Intervention sur terrain difficile pour terrassement de fondations ou préparation de plateforme"
+                }
               />
             </Box>
             <Box>
               <ImageCardComponent
-                title={"Pose d'une fosse septique"}
-                image={Fosse2}
-                alt={"fosse septique"}
+                title={"Cuve de récupération d'eau"}
+                image={Cuve2}
+                alt={"Cuve de récupération d'eau"}
                 text={
-                  "Mise en place de la nouvelle fosse après avoir creusé le trou et déblayé les gravats"
+                  "Mise en place d'une cuve de récupération d'eau après terrassement et déblaiement des gravats"
                 }
               />
             </Box>

@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import { Box, Stack, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
 
+// material icons
+import FacebookIcon from "@mui/icons-material/Facebook";
+
 function onPhoneClick() {
   window.open(`tel:+33659526587`);
 }
@@ -24,6 +27,23 @@ const Footer = () => {
         </Link>
         <Link style={{ textDecoration: "none" }} onClick={onEmailClick}>
           adh.solution@outlook.com
+        </Link>
+      </Stack>
+      <Stack spacing={1} mb={1}>
+        <Typography component={"h3"}>Retrouvez nous sur</Typography>
+        <Link
+          to={"https://www.facebook.com/adhterrassement"}
+          target="_blank"
+          rel="noopener"
+        >
+          <FacebookIcon
+            sx={{
+              fontSize: "30px",
+              path: {
+                color: "#3b5998",
+              },
+            }}
+          />
         </Link>
       </Stack>
       <Stack spacing={1}>
