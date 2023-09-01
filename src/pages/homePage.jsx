@@ -282,7 +282,7 @@ const HomePage = () => {
                   icon={
                     <FolderSpecialOutlinedIcon
                       sx={{
-                        color: theme.palette.primary.light,
+                        color: "gold",
                         fontSize: "40px",
                       }}
                     />
