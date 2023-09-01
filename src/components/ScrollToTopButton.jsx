@@ -37,12 +37,9 @@ const ScrollToTopButton = () => {
   return (
     <ScrollToTopButtonRoot>
       {isVisible && (
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={scrollToTop}
-          startIcon={<KeyboardArrowUpIcon />}
-        ></Button>
+        <Button variant="contained" color="primary" onClick={scrollToTop}>
+          <KeyboardArrowUpIcon />
+        </Button>
       )}
     </ScrollToTopButtonRoot>
   );

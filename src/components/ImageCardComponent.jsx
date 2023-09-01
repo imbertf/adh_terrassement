@@ -14,7 +14,9 @@ export default function ImgMediaCard({ image, alt, title, text, link }) {
         transition: "transform 0.2s",
         "&:hover": {
           transform: "scale(1.05)",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+          svg: {
+            color: "gold",
+          },
         },
       }}
     >
@@ -25,7 +27,7 @@ export default function ImgMediaCard({ image, alt, title, text, link }) {
         image={image}
         sx={{ mb: "20px" }}
       />
-      <CardContent sx={{ p: "0" }}>
+      <CardContent sx={{ p: "0px" }}>
         <Typography gutterBottom variant="h6" component="h3">
           {title}
         </Typography>

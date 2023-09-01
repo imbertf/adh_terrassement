@@ -64,6 +64,7 @@ const Contact = () => {
             sx: {
               backgroundColor: theme.palette.text.primary, // Change the background color
               borderRadius: "0px",
+              color: theme.palette.primary.main,
             },
           }}
         />
@@ -84,6 +85,7 @@ const Contact = () => {
             sx: {
               backgroundColor: theme.palette.text.primary, // Change the background color
               borderRadius: "0px",
+              color: theme.palette.primary.main,
             },
           }}
         />
@@ -105,6 +107,7 @@ const Contact = () => {
             sx: {
               backgroundColor: theme.palette.text.primary, // Change the background color
               borderRadius: "0px",
+              color: theme.palette.primary.main,
             },
           }}
         />

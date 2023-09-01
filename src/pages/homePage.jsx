@@ -36,6 +36,10 @@ import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import BusinessCenterOutlinedIcon from "@mui/icons-material/BusinessCenterOutlined";
 import FolderSpecialOutlinedIcon from "@mui/icons-material/FolderSpecialOutlined";
 import StarBorderPurple500OutlinedIcon from "@mui/icons-material/StarBorderPurple500Outlined";
+import LooksOneOutlinedIcon from "@mui/icons-material/LooksOneOutlined";
+import LooksTwoOutlinedIcon from "@mui/icons-material/LooksTwoOutlined";
+import Looks3OutlinedIcon from "@mui/icons-material/Looks3Outlined";
+import Looks4OutlinedIcon from "@mui/icons-material/Looks4Outlined";
 
 const HomePage = () => {
   const theme = useTheme();
@@ -333,8 +337,8 @@ const HomePage = () => {
               </ScrollLink>
             </Box>
             <Typography color={theme.palette.primary.light} mb={3}>
-              Pause d'un epandage après étude de mise aux normes
-              d'assainissement
+              Pose d'une filière compacte 5EH (Equivalent Humain) après étude de
+              mise aux normes d'assainissement
             </Typography>
           </Stack>
           <Box
@@ -344,34 +348,36 @@ const HomePage = () => {
           >
             <Box mx={1}>
               <ImageCardComponent
-                title={"1"}
+                title={<LooksOneOutlinedIcon />}
                 image={Epandage1}
-                alt={"fosse septique"}
-                text={""}
+                alt={"Fosse septique"}
+                text={
+                  "Terrassement et pose d'une fosse 3000 litres et filtre compact"
+                }
               />
             </Box>
             <Box mx={1}>
               <ImageCardComponent
-                title={"2"}
+                title={<LooksTwoOutlinedIcon />}
                 image={Epandage2}
-                alt={""}
-                text={""}
+                alt={"Epandage"}
+                text={"Mise en place épandage sur lit de gravier roulé 11/22"}
               />
             </Box>
             <Box mx={1}>
               <ImageCardComponent
-                title={"3"}
+                title={<Looks3OutlinedIcon />}
                 image={Epandage3}
-                alt={""}
-                text={""}
+                alt={"Géotextile"}
+                text={"Pose du géotextile pour épandage"}
               />
             </Box>
             <Box mx={1}>
               <ImageCardComponent
-                title={"4"}
+                title={<Looks4OutlinedIcon />}
                 image={Epandage4}
-                alt={""}
-                text={""}
+                alt={"Nivellement du terrain"}
+                text={"Rebouchage et nivellement du terrain"}
               />
             </Box>
           </Box>

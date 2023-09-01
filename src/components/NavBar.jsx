@@ -169,6 +169,7 @@ const NavBar = () => {
                 to={"https://www.facebook.com/adhterrassement"}
                 target="_blank"
                 rel="noopener"
+                aria-label="facebook"
               >
                 <FacebookIcon
                   sx={{
