@@ -105,8 +105,8 @@ const HomePage = () => {
                 de 7 ans.
               </Typography>
               <Typography fontSize={20}>
-                Pour vous et à vos côtés depuis 2016 et plus d'une 50aine de
-                projets réalisés
+                Pour vous et à vos côtés depuis 2016 et plus de{" "}
+                <span style={{ color: "gold" }}>170 de projets</span> réalisés
               </Typography>
             </Box>
             <Box
@@ -125,7 +125,8 @@ const HomePage = () => {
               </Typography>
               <Typography fontSize={20}>
                 Après la réalisation des travaux, ADH Terrassement assure
-                l'intervention en cas de problème grâce à l'assurance décennale
+                l'intervention en cas de problème grâce à l'
+                <span style={{ color: "gold" }}>assurance décennale</span>
               </Typography>
             </Box>
             <Box
@@ -245,8 +246,8 @@ const HomePage = () => {
               </Box>
               <Box>
                 <CardComponent
-                  title={"Aménagement exterieur"}
-                  text={"Pour vous aider à créer votre ambiance exterieure"}
+                  title={"Aménagement extérieur"}
+                  text={"Pour vous aider à créer votre ambiance extérieure"}
                   icon={
                     <WbSunnyOutlinedIcon
                       sx={{
@@ -277,7 +278,7 @@ const HomePage = () => {
                 <CardComponent
                   title={"Projet complet"}
                   text={
-                    "Vous accompagner dans votre projet de A à Z. Reccueil des besoins, conseils, accompagnement et mise à disposition de l'expertise ADH Terrassement "
+                    "Vous accompagner dans votre projet de A à Z. Recueil des besoins, conseils, accompagnement et mise à disposition de l'expertise ADH Terrassement "
                   }
                   icon={
                     <FolderSpecialOutlinedIcon
@@ -300,8 +301,7 @@ const HomePage = () => {
           pb={5}
         >
           <Stack
-            direction={{ lg: "row" }}
-            alignItems={"center"}
+            alignItems={{ xs: "center", sm: "flex-start" }}
             justifyContent={"space-between"}
           >
             <Box
@@ -316,9 +316,9 @@ const HomePage = () => {
                 />
               </Typography>
               <Typography color={theme.palette.primary.light} mb={3}>
-                Visite du site, reccueil des besoins, établissement du cahier
-                des charges, proposition d'un devis personnalisé et réalisation
-                de A à Z.
+                Visite du site, recueil des besoins, établissement du cahier des
+                charges, proposition d'un devis personnalisé et réalisation de A
+                à Z.
               </Typography>
               <ScrollLink to="contact" smooth={true} duration={500}>
                 <Button
@@ -431,10 +431,10 @@ const HomePage = () => {
             </Box>
             <Box>
               <ImageCardComponent
-                title={"Materiels"}
+                title={"Matériels"}
                 image={Materiel1}
-                alt={"materiels en location"}
-                text={"Matériels professionnels disponnibles à la location"}
+                alt={"matériels en location"}
+                text={"Matériels professionnels disponibles à la location"}
               />
             </Box>
             <Box>
