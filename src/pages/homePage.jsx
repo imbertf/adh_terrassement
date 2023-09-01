@@ -50,7 +50,7 @@ const HomePage = () => {
             justifyContent={"space-between"}
           >
             <Typography component="h1" variant="h2" width={{ sm: "45%" }}>
-              ARTISANT TERRASSIER A PERNES LES FONTAINES
+              ARTISAN TERRASSIER A PERNES LES FONTAINES
             </Typography>
 
             <Stack width={{ sm: "40%" }} pt={2}>
@@ -494,7 +494,7 @@ const HomePage = () => {
             <Typography color={theme.palette.primary.light} mb={3}>
               Pour établir un devis, remplissez le formulaire de contact. Si
               vous le souhaitez, n'hésitez pas à nous appeler directement ou par
-              mail. Expliquer votre projet en quelques lignes afin de pouvoir au
+              mail. Expliquez votre projet en quelques lignes afin de pouvoir au
               mieux préparer votre accompagnement
             </Typography>
           </Stack>
